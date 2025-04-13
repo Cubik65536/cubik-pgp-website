@@ -140,12 +140,6 @@ const App = () => {
     }
   };
 
-  // Function to show a banner (can be called from anywhere)
-  const showBanner = (type: BannerType, message: string, isHtml: boolean = false) => {
-    setBanner({ type, message, isHtml });
-    setTimeout(() => setBanner({ type: null, message: '' }), 5000);
-  };
-
   // Get banner styles based on type
   const getBannerStyles = () => {
     if (!banner.type) return '';
