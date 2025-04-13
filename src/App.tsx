@@ -184,6 +184,47 @@ const App = () => {
     return <span>{banner.message}</span>;
   };
 
+  // Social Links Component
+  const SocialLinks = () => (
+    <div className="flex justify-center space-x-4 mb-8">
+      <a href="https://cubik65536.top" className={`p-2 rounded-lg transition-colors duration-200 ${
+        isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'
+      } shadow-md`} aria-label="Main Site">
+        <img src="https://fapro6.cubik65536.top/svgs/duotone/globe.svg" alt="Main Site" className={`w-6 h-6 ${isDarkMode ? 'invert brightness-0' : ''}`} />
+      </a>
+      <a href="mailto:me@cubik65536.top" className={`p-2 rounded-lg transition-colors duration-200 ${
+        isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'
+      } shadow-md`} aria-label="Email">
+        <img src="https://fapro6.cubik65536.top/svgs/duotone/envelopes-bulk.svg" alt="Email" className={`w-6 h-6 ${isDarkMode ? 'invert brightness-0' : ''}`} />
+      </a>
+      <a href="https://github.com/Cubik65536" className={`p-2 rounded-lg transition-colors duration-200 ${
+        isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'
+      } shadow-md`} aria-label="GitHub">
+        <img src="https://fapro6.cubik65536.top/svgs/brands/github.svg" alt="GitHub" className={`w-6 h-6 ${isDarkMode ? 'invert brightness-0' : ''}`} />
+      </a>
+      <a href="https://bsky.app/profile/cubik65536.top" className={`p-2 rounded-lg transition-colors duration-200 ${
+        isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'
+      } shadow-md`} aria-label="Bluesky">
+        <img src="https://fapro6.cubik65536.top/svgs/brands/bluesky.svg" alt="Bluesky" className={`w-6 h-6 ${isDarkMode ? 'invert brightness-0' : ''}`} />
+      </a>
+      <a href="https://x.com/Cubik65536" className={`p-2 rounded-lg transition-colors duration-200 ${
+        isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'
+      } shadow-md`} aria-label="X (Twitter)">
+        <img src="https://fapro6.cubik65536.top/svgs/brands/x-twitter.svg" alt="X (Twitter)" className={`w-6 h-6 ${isDarkMode ? 'invert brightness-0' : ''}`} />
+      </a>
+      <a href="https://t.me/cubiksteleblog" className={`p-2 rounded-lg transition-colors duration-200 ${
+        isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'
+      } shadow-md`} aria-label="Telegram">
+        <img src="https://fapro6.cubik65536.top/svgs/brands/telegram.svg" alt="Telegram" className={`w-6 h-6 ${isDarkMode ? 'invert brightness-0' : ''}`} />
+      </a>
+      <a href="https://space.bilibili.com/439205819" className={`p-2 rounded-lg transition-colors duration-200 ${
+        isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'
+      } shadow-md`} aria-label="BiliBili (哔哩哔哩)">
+        <img src="https://fapro6.cubik65536.top/svgs/brands/bilibili.svg" alt="BiliBili (哔哩哔哩)" className={`w-6 h-6 ${isDarkMode ? 'invert brightness-0' : ''}`} />
+      </a>
+    </div>
+  );
+
   return (
     <div className={`text-center selection:bg-green-900 ${isDarkMode ? 'dark' : ''}`}>
       {/* Banner - Fixed on desktop, scrollable on mobile */}
@@ -197,9 +238,10 @@ const App = () => {
       )}
       
       <header className={`min-h-screen flex flex-col items-center justify-center ${isDarkMode ? 'bg-[#282c34]' : 'bg-gray-100'} text-${isDarkMode ? 'white' : 'gray-800'} transition-colors duration-200 py-16 ${banner.type ? 'md:pt-20' : ''}`}>
-        <p className="bg-gradient-to-r from-[#57728B] to-orange-500 bg-clip-text text-5xl font-black text-transparent selection:bg-transparent mb-12">
+        <p className="bg-gradient-to-r from-[#57728B] to-orange-500 bg-clip-text text-5xl font-black text-transparent selection:bg-transparent mb-4">
           Cubik65536's GPG Public Key
         </p>
+        <SocialLinks />
         <div className="w-full max-w-3xl px-4">
           {/* PGP Fingerprint Section */}
           <div className={`mb-6 p-4 rounded-lg ${isDarkMode ? 'bg-[#1e2127]' : 'bg-white'} shadow-md`}>
